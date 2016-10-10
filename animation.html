@@ -5,12 +5,33 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <h1>Pac-man</h1>
+    <p>Pac-man was hungry so he went out for a walk to find food. He was strolling
+      through his home when he noticed some yummy looking white cirles. And of course
+      the first thing he does is eat them. But the circle put him in a trance
+      where he moves the sme way over and over again.</p>
   <svg width="80%" viewBox="0 0 200 200">
-<circle cx="50" cy="50" r="35" fill="yellow">
-  <animate attributeName="cx" from="45" to="100" begin="click"
+<circle cx="50" cy="50" r="35" fill="yellow" id="pack" opacity=".9">
+  <animate attributeName="cx" from="45" to="130" begin="click"
   dur="5s" id="circle-animation"/>
 </circle>
-  <polygon points="54,50 78,30 76,75">
-    ,animate attributeName=""
+  <polygon points="50,50 80,30 80,69">
+    <animate attributeName="points" from="54,50 78,30 75,69" to="139,50 163,30 160,69" begin="pack.click"
+    dur="5s" id="polygon-animation"/>
+  </polygon>
+  <rect x="74" y="30.5" width="15" height="43.5" fill="gainsboro">
+    <animate attributeName="x" from="75" to="160" begin="pack.click"
+    dur="5s" id="circle-animation"/>
+  </rect>
+  <circle cx="90" cy="55" r="5" fill="white">
+    <animate attributeName="fill" from="white" to="yellow" begin="pack.click+0.5s"
+    dur="0.5s" id="test1" fill="freeze"/>
+  </circle>
+  <circle cx="120" cy="55" r="5" fill="white">
+    <animate attributeName="fill" from="white" to="Gainsboro" begin="pack.click+2.5s"
+    dur="0.5s" id="circle-animation" fill="freeze"/>
+  </circle>
+</svg>
+
   </body>
 </html>
